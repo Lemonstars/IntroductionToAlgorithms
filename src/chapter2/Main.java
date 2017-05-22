@@ -18,6 +18,14 @@ public class Main {
         printArray(insertSort.insertSort(test3));
         printArray(insertSort.insertSort(test4));
 
+        printArray(insertSort.insertSortDesc(test1));
+        printArray(insertSort.insertSortDesc(test2));
+        printArray(insertSort.insertSortDesc(test3));
+        printArray(insertSort.insertSortDesc(test4));
+
+        int first[]={1,0,1,1};
+        int second[]={1,0,1,0};
+        printArray(insertSort.binaryAdd(first,second,4));
     }
 
     public static void printArray(int[] input){
