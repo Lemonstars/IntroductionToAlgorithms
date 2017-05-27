@@ -11,9 +11,16 @@ public class MaxArray {
 
         int[] test1=new int[]{13,-3,-25,20,-3,-16,-23,18,20,-7,12,-5,-22,15,-4,7};
         int[] result=findMaxSubArray(test1,0,test1.length-1);
+        System.out.println("归并解法:");
         System.out.println("Left index: "+result[0]);
         System.out.println("Right index: "+result[1]);
         System.out.println("Max sum: "+result[2]);
+
+        System.out.println("暴力解法:");
+        int[] resultViolence=violenceSolve(test1);
+        System.out.println("Left index: "+resultViolence[0]);
+        System.out.println("Right index: "+resultViolence[1]);
+        System.out.println("Max sum: "+resultViolence[2]);
 
     }
 
@@ -85,6 +92,25 @@ public class MaxArray {
         result[1]=maxRightIdnex;
         result[2]=leftSum+rightSum;
 
+        return result;
+    }
+
+    private static int[] violenceSolve(int[] input){
+        int[] result=new int[3];
+        int sum=Integer.MIN_VALUE;
+
+        for(int i=0;i<input.length;i++){
+            int currentSum=0;
+            for(int j=i;j<input.length;j++){
+                currentSum+=input[j];
+                if(currentSum>sum){
+                    result[0]=i;
+                    result[1]=j;
+                    result[2]=currentSum;
+                    sum=currentSum;
+                }
+            }
+        }
         return result;
     }
 }
