@@ -6,15 +6,15 @@ public class MatrixMultiply {
     public static void main(String arg[]){
 
         //测试矩阵一般乘法
-//        int a[][]=new int[][]{{1,2,3},{4,5,6}};
-//        int b[][]=new int[][]{{6,5},{4,3},{2,1}};
-//        int result[][]=violenceMultiply(a,b);
-//        System.out.println("a =");
-//        printMatrix(a);
-//        System.out.println("b =");
-//        printMatrix(b);
-//        System.out.println("result =");
-//        printMatrix(result);
+        int a[][]=new int[][]{{1,2,3},{4,5,6}};
+        int b[][]=new int[][]{{6,5},{4,3},{2,1}};
+        int result[][]=violenceMultiply(a,b);
+        System.out.println("a =");
+        printMatrix(a);
+        System.out.println("b =");
+        printMatrix(b);
+        System.out.println("result =");
+        printMatrix(result);
 
         //测试方针的递归分治算法
         int c[][]=new int[][]{{1,2},{3,4}};
